@@ -7,4 +7,7 @@ for (let i = 0; i < 256; i++) {
   squareBlocks.classList.add("squareBlock" + i);
   squareBlocks.classList.add("blocks");
   container.append(squareBlocks);
+  squareBlocks.addEventListener("mouseover", (e) => {
+    squareBlocks.classList.add("squarePainted");
+  });
 }
