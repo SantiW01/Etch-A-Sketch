@@ -13,15 +13,14 @@ h1 {
 }
 
 .container {
-  position: relative;
-  top: 30px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   outline: 2px solid #000;
-  font-size: 0;
   margin: auto;
   height: 500px;
   width: 500px;
-  padding: 0;
-  border: none;
 }
 
 .blocks {
