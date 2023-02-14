@@ -13,22 +13,23 @@ h1 {
 }
 
 .container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  top: 30px;
+  outline: 2px solid #000;
+  font-size: 0;
+  margin: auto;
+  height: 500px;
+  width: 500px;
+  padding: 0;
+  border: none;
 }
 
 .blocks {
-  border: 1px solid black;
-  height: 25px;
-  width: 25px;
-}
-
-.blocks:nth-child(16n + 1) {
-  width: 100%;
-  border: 0;
-  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 1px solid #000;
+  display: inline-block;
 }
 
 .squarePainted {
