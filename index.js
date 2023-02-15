@@ -9,21 +9,26 @@ function SquaresPerSide() {
       alert("Sorry. The grid must not be more than 100x100");
       numberSelected = Number(prompt("Select how many squares would have"));
     }
-    for (let i = 0; i < numberSelected; i++) {
-      for (let j = 0; j < numberSelected; j++) {
-        const squareBlocks = document.createElement("div");
-        squareBlocks.classList.add("blocks");
-        container.append(squareBlocks);
-        squareBlocks.setAttribute(
-          "style",
-          `width:calc(500px/${numberSelected}); height:calc(500px/${numberSelected})`
-        );
-        squareBlocks.addEventListener("mouseover", (e) => {
-          squareBlocks.classList.add("squarePainted");
-        });
-      }
-    }
+    MakeNewGrid(numberSelected);
   });
 }
 
 SquaresPerSide();
+
+MakeNewGrid(16);
+
+function MakeNewGrid(numberSelected) {
+  container.replaceChildren();
+  for (let i = 0; i < numberSelected * numberSelected; i++) {
+    const squareBlocks = document.createElement("div");
+    squareBlocks.classList.add("blocks");
+    container.append(squareBlocks);
+    squareBlocks.setAttribute(
+      "style",
+      `width:calc(500px/${numberSelected}); height:calc(500px/${numberSelected})`
+    );
+    squareBlocks.addEventListener("mouseover", (e) => {
+      squareBlocks.classList.add("squarePainted");
+    });
+  }
+}
